@@ -1,0 +1,2 @@
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Hello RapidMQ"}, "message_id": 1}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Hello RapidMQ"}, "message_id": 2}

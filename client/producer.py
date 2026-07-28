@@ -12,6 +12,7 @@ print(f"conntected to rapidmq {HOST}:{PORT}")
 message = {
     "version": 1,
     "type": "PUBLISH",
+    "topic":"order",
     "payload": {
         "message": "Hello RapidMQ"
     }

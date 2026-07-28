@@ -10,6 +10,7 @@ consumer_socket.connect((HOST,PORT))
 
 message = {
     "version": 1,
+    "topic": "order",
     "type": MESSAGE_TYPE_CONSUME,
 }
 
