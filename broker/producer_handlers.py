@@ -1,60 +1,50 @@
-from common.constants import HOST, PORT, BUFFER_SIZE,MESSAGE_TYPE_PUBLISH, MESSAGE_TYPE_CONSUME
-from common.protocol import encode_message, decode_message
-from broker.storage import topics , queue_lock, message_id , id_lock
-from broker.log_manager import append_message
-import time
-ACK={
-    "version": 1,
-    "type": "ACK",
-    "payload": {
-        "status": "SUCCESS"
-    }
-}
+from common.constants import (
+    BUFFER_SIZE,
+    MESSAGE_TYPE_PUBLISH,
+    MESSAGE_TYPE_CONSUME,
+    MESSAGE_TYPE_ACK,
+)
+from common.protocol import decode_message
+from broker.message_handlers import (
+    handle_publish,
+    handle_consume,
+    handle_ack,
+)
+
 
 def handle_client(client_socket, client_address):
     print(f"Client connected: {client_address}")
-    time.sleep(10)
-    message = client_socket.recv(BUFFER_SIZE)
 
-    message = decode_message(message)
+    try:
+        while True:
 
-    if message["type"] == MESSAGE_TYPE_PUBLISH:
+            message = client_socket.recv(BUFFER_SIZE)
 
-        with id_lock:
-            message_id["value"] += 1
-            message["message_id"] = message_id["value"]
-        topic = message["topic"]
-        append_message(topic , message)
-        with queue_lock:
-            if topic not in topics:
-                topics[topic] = []
-            topics[topic].append(message)
+            # Client disconnected
+            if not message:
+                print(f"Client disconnected: {client_address}")
+                break
 
-        encoded_ack = encode_message(ACK)
+            message = decode_message(message)
 
-        client_socket.send(encoded_ack)
+            if message["type"] == MESSAGE_TYPE_PUBLISH:
+                handle_publish(message, client_socket)
 
-    elif message["type"] == MESSAGE_TYPE_CONSUME:
-        topic = message["topic"]
-        with queue_lock:
-            if topic not in topics or len(topics[topic]) == 0 :
-                response = {
-                                    "version": 1,
-                                    "type": "EMPTY",
-                                    "payload": {
-                                        "message": "Queue is empty"
-                                    }
-                                }
-                
+            elif message["type"] == MESSAGE_TYPE_CONSUME:
+                handle_consume(message, client_socket)
+
+            elif message["type"] == MESSAGE_TYPE_ACK:
+                handle_ack(message)
+
             else:
-                response = topics[topic].pop(0)
+                print(f"Unknown message type: {message['type']}")
 
-        client_socket.send(
-            encode_message(response)
-        )
+            print(message)
+            print("Processed message")
 
-    print(message)
+    except Exception as e:
+        print(f"Error while handling {client_address}: {e}")
 
-    print("Sent to client")
-
-    client_socket.close()
+    finally:
+        client_socket.close()
+        print(f"Connection closed: {client_address}")

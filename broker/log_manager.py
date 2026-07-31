@@ -1,6 +1,6 @@
 import json
 import os
-
+from .storage import message_id
 
 STORAGE_DIR = "storage"
 
@@ -27,6 +27,7 @@ def load_messages():
         return {}
 
     loaded_topics = {}
+    highest_id = 0
 
     for file_name in os.listdir(STORAGE_DIR):
 
@@ -43,5 +44,6 @@ def load_messages():
                 for line in file:
                     message = json.loads(line)
                     loaded_topics[topic].append(message)
-
+                    highest_id = max(highest_id, message.get("message_id", 0))
+    message_id["value"] = highest_id
     return loaded_topics

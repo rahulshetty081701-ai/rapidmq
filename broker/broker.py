@@ -1,4 +1,5 @@
 import socket
+from broker.timeout_manager import monitor_timeouts
 from common.constants import HOST, PORT
 from broker.producer_handlers import handle_client
 import threading
@@ -11,6 +12,14 @@ server_socket.bind((HOST,PORT))
 topics.update(load_messages())
 server_socket.listen()
 print(f"RapidMQ Broker listening on {HOST}:{PORT}")
+
+timeout_thread = threading.Thread(
+    target=monitor_timeouts,
+    daemon=True
+)
+
+timeout_thread.start()
+print("Timeout monitor started...")
 
 while True:
     client_socket, client_address = server_socket.accept()
