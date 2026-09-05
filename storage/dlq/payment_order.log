@@ -1,0 +1,4 @@
+{"message": {"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "How are you doing?"}, "message_id": 2}, "timestamp": 1787673209.5633113, "offset": 1, "retry_count": 2}
+{"message": {"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "How are you doing?"}, "message_id": 2}, "timestamp": 1787674544.9584188, "offset": 1, "retry_count": 2}
+{"message": {"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "How are you doing?"}, "message_id": 2}, "timestamp": 1787675130.0576625, "offset": 1, "retry_count": 2}
+{"message": {"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "How are you doing?"}, "message_id": 2}, "timestamp": 1787759816.688648, "offset": 1, "retry_count": 2}

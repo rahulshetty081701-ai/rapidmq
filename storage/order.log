@@ -1,0 +1,12 @@
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Hello RapidMQ"}, "message_id": 1}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "How are you doing?"}, "message_id": 2}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "pass this message to the consumer"}, "message_id": 3}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "is offset persistence working?"}, "message_id": 4}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 5}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 6}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 7}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 8}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 9}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 10}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 11}
+{"version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if after timeout offset is committed and next offset is updated"}, "message_id": 12}

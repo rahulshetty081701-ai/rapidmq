@@ -1,0 +1,8 @@
+{
+    "analytics": {
+        "order": 6
+    },
+    "payment": {
+        "order": 12
+    }
+}
