@@ -7,14 +7,11 @@ class Partition:
     def append(self, message):
         offset = self.next_offset
 
-        self.messages.append({
-            "offset": offset,
-            "message": message
-        })
+        message["offset"] = offset
+        message["partition"] = self.partition_id
+
+        self.messages.append(message)
 
         self.next_offset += 1
 
         return offset
-
-partition = Partition(0)
-offset = partition.append("Hello, World!")

@@ -31,3 +31,8 @@ resolved_offsets_lock = threading.Lock()
 
 consumers = {}
 consumers_lock = threading.Lock()
+
+next_partition = {}
+
+partition_assignments = {}
+partition_assignments_lock = threading.Lock()

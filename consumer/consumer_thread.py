@@ -34,7 +34,8 @@ class ConsumerClient:
         register_message = {
             "version": 1,
             "type": MESSAGE_TYPE_REGISTER,
-            "group_id": self.group_id
+            "group_id": self.group_id,
+            "topic": self.topic
         }
 
         self.consumer_socket.sendall(
@@ -42,7 +43,6 @@ class ConsumerClient:
         )
 
         response = recv_message(self.consumer_socket)
-
         if response is None or response["type"] != "REGISTERED":
             raise Exception("Consumer registration failed.")
 
@@ -120,7 +120,8 @@ class ConsumerClient:
             "type": "ACK",
             "group_id": self.group_id,
             "consumer_id": self.consumer_id,
-            "message_id": message["message_id"]
+            "message_id": message["message_id"],
+            
         }
 
         self.consumer_socket.sendall(

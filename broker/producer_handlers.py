@@ -24,7 +24,6 @@ def handle_client(client_socket, client_address):
         while True:
 
             message = recv_message(client_socket)
-
             # Client disconnected
             if not message:
                 print(f"Client disconnected: {client_address}")

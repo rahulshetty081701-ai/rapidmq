@@ -13,9 +13,8 @@ def encode_message(message: dict) -> bytes:
 
 def decode_message(data: bytes) -> dict:
     """Convert bytes into a Python dictionary."""
-
+    print(f"Decoding message: {data}")
     return json.loads(data.decode("utf-8"))
-
 
 def recv_message(client_socket):
     """Receive exactly one length-prefixed message from a socket."""
@@ -30,7 +29,6 @@ def recv_message(client_socket):
 
     if length > MAX_MESSAGE_SIZE:
         raise ValueError("Message too large")
-
     data = b""
 
     while len(data) < length:

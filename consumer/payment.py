@@ -24,10 +24,10 @@ try:
             print("No messages available to consume.")
             time.sleep(1)
             continue
-
+        msg_content = message.get("payload", {}).get("message") if isinstance(message.get("payload"), dict) else message.get("message")
         print(
             f"Consumed message: "
-            f"{message['payload']['message']}"
+            f"{msg_content}"
         )
 
         # Simulate processing

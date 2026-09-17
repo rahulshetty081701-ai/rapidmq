@@ -14,7 +14,7 @@ message = {
     "type": "PUBLISH",
     "topic":"order",
     "payload": {
-        "message": "Check if after timeout offset is committed and next offset is updated",
+        "message": "Check if message publishing is working after partition",
     }
 }
 
