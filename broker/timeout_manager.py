@@ -35,13 +35,17 @@ def monitor_timeouts():
                         retry_queue[group_id] = {}
 
                     if topic not in retry_queue[group_id]:
-                        retry_queue[group_id][topic] = []
+                        retry_queue[group_id][topic] = {}
+                        
+                    partition_id = data.get("partition", 0)
+                    if partition_id not in retry_queue[group_id][topic]:
+                        retry_queue[group_id][topic][partition_id] = []
 
-                    retry_queue[group_id][topic].append(data)
+                    retry_queue[group_id][topic][partition_id].append(data)
 
                 print(
                     f"Message {message_id} re-queued for retry "
-                    f"under group '{group_id}', topic '{topic}'."
+                    f"under group '{group_id}', topic '{topic}', partition '{partition_id}'."
                 )
 
             else:

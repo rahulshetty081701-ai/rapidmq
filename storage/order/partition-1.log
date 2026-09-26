@@ -1,0 +1,9 @@
+{"partition": 1, "offset": 0, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_1"}, "message_id": 2}
+{"partition": 1, "offset": 1, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_4"}, "message_id": 5}
+{"partition": 1, "offset": 2, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_7"}, "message_id": 8}
+{"partition": 1, "offset": 3, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_10"}, "message_id": 11}
+{"partition": 1, "offset": 4, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_13"}, "message_id": 14}
+{"partition": 1, "offset": 5, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_16"}, "message_id": 17}
+{"partition": 1, "offset": 6, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_19"}, "message_id": 20}
+{"partition": 1, "offset": 7, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if message publishing is working after partition"}, "message_id": 22}
+{"partition": 1, "offset": 8, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if message publishing is working after partition"}, "message_id": 25}

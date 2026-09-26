@@ -116,8 +116,16 @@ def load_offsets():
     if OFFSET_FILE.exists():
         with open(OFFSET_FILE, "r") as file:
             loaded_offsets = json.load(file)
+            
+            converted_offsets = {}
+            for group, topics in loaded_offsets.items():
+                converted_offsets[group] = {}
+                for topic, partitions in topics.items():
+                    converted_offsets[group][topic] = {
+                        int(p_id): offset for p_id, offset in partitions.items()
+                    }
 
             with consumer_offsets_lock:
                 consumer_offsets.clear()
-                consumer_offsets.update(loaded_offsets)
+                consumer_offsets.update(converted_offsets)
     

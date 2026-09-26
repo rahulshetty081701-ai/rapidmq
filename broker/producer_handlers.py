@@ -11,7 +11,8 @@ from broker.message_handlers import (
     handle_heartbeat,
     handle_consume,
     handle_ack,
-    handle_register
+    handle_register,
+    release_consumer_partition
 )
 
 from broker.storage import consumers, consumers_lock
@@ -53,16 +54,10 @@ def handle_client(client_socket, client_address):
 
     finally:
         if consumer_id is not None:
-
-            with consumers_lock:
-
-                if consumer_id in consumers:
-
-                    consumers[consumer_id]["status"] = "DEAD"
-
-                    print(
-                        f"Consumer '{consumer_id}' "
-                        f"disconnected. Marked as DEAD."
-                    )
+            print(
+                f"Consumer '{consumer_id}' "
+                f"disconnected. Marked as DEAD."
+            )
+            release_consumer_partition(consumer_id)
         client_socket.close()
         print(f"Connection closed: {client_address}")

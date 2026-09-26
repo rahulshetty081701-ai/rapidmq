@@ -1,0 +1,7 @@
+{"partition": 2, "offset": 0, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_2"}, "message_id": 3}
+{"partition": 2, "offset": 1, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_5"}, "message_id": 6}
+{"partition": 2, "offset": 2, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_8"}, "message_id": 9}
+{"partition": 2, "offset": 3, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_11"}, "message_id": 12}
+{"partition": 2, "offset": 4, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_14"}, "message_id": 15}
+{"partition": 2, "offset": 5, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"data": "msg_17"}, "message_id": 18}
+{"partition": 2, "offset": 6, "version": 1, "type": "PUBLISH", "topic": "order", "payload": {"message": "Check if message publishing is working after partition"}, "message_id": 23}
