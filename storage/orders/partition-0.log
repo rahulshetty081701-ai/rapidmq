@@ -1,0 +1,23 @@
+{"partition": 0, "offset": 0, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 1}
+{"partition": 0, "offset": 1, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 4}
+{"partition": 0, "offset": 2, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {}, "message_id": 9}
+{"partition": 0, "offset": 3, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 10}
+{"partition": 0, "offset": 4, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 11}
+{"partition": 0, "offset": 5, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 14}
+{"partition": 0, "offset": 6, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 15}
+{"partition": 0, "offset": 7, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 16}
+{"partition": 0, "offset": 8, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 17}
+{"partition": 0, "offset": 9, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 20}
+{"partition": 0, "offset": 10, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 21}
+{"partition": 0, "offset": 11, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 24}
+{"partition": 0, "offset": 12, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 25}
+{"partition": 0, "offset": 13, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 28}
+{"partition": 0, "offset": 14, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 29}
+{"partition": 0, "offset": 15, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 32}
+{"partition": 0, "offset": 16, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 33}
+{"partition": 0, "offset": 17, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 36}
+{"partition": 0, "offset": 18, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 37}
+{"partition": 0, "offset": 19, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 40}
+{"partition": 0, "offset": 20, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 41}
+{"partition": 0, "offset": 21, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 0"}, "message_id": 44}
+{"partition": 0, "offset": 22, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 3"}, "message_id": 45}

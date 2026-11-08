@@ -1,0 +1,9 @@
+{"partition": 2, "offset": 0, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 7}
+{"partition": 2, "offset": 1, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 10}
+{"partition": 2, "offset": 2, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 17}
+{"partition": 2, "offset": 3, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 21}
+{"partition": 2, "offset": 4, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 23}
+{"partition": 2, "offset": 5, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 25}
+{"partition": 2, "offset": 6, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 33}
+{"partition": 2, "offset": 7, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 37}
+{"partition": 2, "offset": 8, "version": 1, "type": "PUBLISH", "topic": "payments", "payload": {"message": "Payment 2"}, "message_id": 39}

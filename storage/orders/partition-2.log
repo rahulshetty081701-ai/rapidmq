@@ -1,0 +1,9 @@
+{"partition": 2, "offset": 0, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 3}
+{"partition": 2, "offset": 1, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 9}
+{"partition": 2, "offset": 2, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 16}
+{"partition": 2, "offset": 3, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 20}
+{"partition": 2, "offset": 4, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 22}
+{"partition": 2, "offset": 5, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 24}
+{"partition": 2, "offset": 6, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 32}
+{"partition": 2, "offset": 7, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 36}
+{"partition": 2, "offset": 8, "version": 1, "type": "PUBLISH", "topic": "orders", "payload": {"message": "Order 2"}, "message_id": 38}

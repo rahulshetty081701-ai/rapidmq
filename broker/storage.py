@@ -5,6 +5,8 @@ queue_lock = threading.Lock()
 message_id = {"value": 0}
 id_lock = threading.Lock()
 
+broker_id = {"value": 1}
+
 
 in_flight = {}
 in_flight_lock = threading.Lock()
@@ -12,7 +14,7 @@ print("Storage initialized:in_flight",in_flight)
 
 consumer_offsets = {}
 print("Storage initialized:consumer_offsets",consumer_offsets)
-consumer_offsets_lock = threading.Lock()
+consumer_offsets_lock = threading.RLock()
 
 next_offset = {}
 next_offset_lock = threading.Lock()
@@ -36,3 +38,6 @@ next_partition = {}
 
 partition_assignments = {}
 partition_assignments_lock = threading.Lock()
+
+group_generations = {}
+group_generations_lock = threading.Lock()

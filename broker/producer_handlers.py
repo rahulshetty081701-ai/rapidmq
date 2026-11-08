@@ -3,7 +3,12 @@ from common.constants import (
     MESSAGE_TYPE_CONSUME,
     MESSAGE_TYPE_ACK,
     MESSAGE_TYPE_REGISTER,
-    MESSAGE_TYPE_HEARTBEAT
+    MESSAGE_TYPE_HEARTBEAT,
+    MESSAGE_TYPE_METADATA,
+    MESSAGE_TYPE_VALIDATE_ASSIGNMENT,
+    MESSAGE_TYPE_ASSIGNMENT_UPDATE,
+    MESSAGE_TYPE_RELEASE_ASSIGNMENT,
+    MESSAGE_TYPE_OFFSET_COMMIT
 )
 from common.protocol import recv_message
 from broker.message_handlers import (
@@ -12,6 +17,11 @@ from broker.message_handlers import (
     handle_consume,
     handle_ack,
     handle_register,
+    handle_metadata,
+    handle_validate_assignment,
+    handle_assignment_update,
+    handle_release_assignment,
+    handle_offset_commit,
     release_consumer_partition
 )
 
@@ -41,7 +51,17 @@ def handle_client(client_socket, client_address):
             elif message["type"] == MESSAGE_TYPE_REGISTER:
                 consumer_id = handle_register(message, client_socket)
             elif message["type"] == MESSAGE_TYPE_HEARTBEAT:
-                handle_heartbeat(message)
+                handle_heartbeat(message, client_socket)
+            elif message["type"] == MESSAGE_TYPE_METADATA:
+                handle_metadata(message, client_socket)
+            elif message["type"] == MESSAGE_TYPE_VALIDATE_ASSIGNMENT:
+                handle_validate_assignment(message, client_socket)
+            elif message["type"] == MESSAGE_TYPE_ASSIGNMENT_UPDATE:
+                handle_assignment_update(message, client_socket)
+            elif message["type"] == MESSAGE_TYPE_RELEASE_ASSIGNMENT:
+                handle_release_assignment(message, client_socket)
+            elif message["type"] == MESSAGE_TYPE_OFFSET_COMMIT:
+                handle_offset_commit(message, client_socket)
 
             else:
                 print(f"Unknown message type: {message['type']}")

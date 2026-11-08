@@ -4,7 +4,7 @@ from consumer.consumer_thread import ConsumerClient
 
 
 GROUP_ID = "payment"
-TOPIC = "order"
+TOPIC = "orders"
 
 
 consumer = ConsumerClient(
